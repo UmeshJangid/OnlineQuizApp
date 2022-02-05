@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OnlineQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nxC-VA-eRW" userLabel="button_stackview">
+                                <rect key="frame" x="0.0" y="484.66666666666674" width="390" height="325.33333333333326"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlP-7Z-6NX">
+                                        <rect key="frame" x="34" y="0.0" width="322" height="68"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="True" backgroundImage="Rectangle">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C8X-8n-wt3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yya-F3-bsW">
+                                        <rect key="frame" x="34" y="111.66666666666669" width="322" height="68"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="False" backgroundImage="Rectangle">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DcV-Ie-thb"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="U0p-61-2Gy">
+                                        <rect key="frame" x="0.0" y="223.33333333333331" width="390" height="102"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="U0p-61-2Gy" secondAttribute="trailing" id="McH-cx-ljQ"/>
+                                    <constraint firstItem="U0p-61-2Gy" firstAttribute="leading" secondItem="nxC-VA-eRW" secondAttribute="leading" id="ddi-O1-AGI"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="260" id="nih-Az-2Ym"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4w2-Jy-eh8" userLabel="Label_satckview">
+                                <rect key="frame" x="0.0" y="226" width="390" height="28.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lets test your knowledge." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leQ-be-dfY">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="28.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.11192502640899074" green="0.013752211551180444" blue="0.30393401015228427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nxC-VA-eRW" secondAttribute="trailing" id="15t-Zz-HcV"/>
+                            <constraint firstItem="nxC-VA-eRW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4nF-Wz-ZKj"/>
+                            <constraint firstItem="nxC-VA-eRW" firstAttribute="top" secondItem="4w2-Jy-eh8" secondAttribute="bottom" constant="230" id="DqW-eb-lxA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nxC-VA-eRW" secondAttribute="bottom" id="IdP-kO-WQr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4w2-Jy-eh8" secondAttribute="trailing" id="bZw-I5-Gay"/>
+                            <constraint firstItem="4w2-Jy-eh8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pFv-mL-bbA"/>
+                            <constraint firstItem="4w2-Jy-eh8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="182" id="ssK-JQ-7Df"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="falseButton" destination="Yya-F3-bsW" id="bcT-6h-T14"/>
+                        <outlet property="questionLable" destination="leQ-be-dfY" id="vkn-RW-0u7"/>
+                        <outlet property="trueButton" destination="wlP-7Z-6NX" id="rO3-9d-ZTQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background-Bubbles" width="352" height="102"/>
+        <image name="Rectangle" width="322" height="68"/>
+    </resources>
+</document>
